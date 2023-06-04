@@ -1,31 +1,42 @@
-<script>
-  
-  function validarFormulario() {
-  var nombre = document.getElementById("nombre").value;
-  var email = document.getElementById("email").value;
-  var mensaje = document.getElementById("mensaje").value;
-  
+//Codigo Api/Ajax
 
-  var errorMensaje = document.getElementById("error-mensaje");
-  
-  // Validar que los campos no estén vacíos
-  if (nombre === "" || email === "" || mensaje === "") {
-    errorMensaje.innerText = "Por favor, completa todos los campos";
-    //alert("Por favor, completa todos los campos");
-    errorMensaje.style.display = "block";
-    return false;
-  }
-  
-  // Validar formato de correo electrónico
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    errorMensaje.innerText = "Por favor, ingresa un correo electrónico válido";
-    errorMensaje.style.display = "block";
-    return false;
-  }
-  
-  // Si todos los campos son válidos, el formulario se envía
-  alert("Mensaje enviado");
-  return true;
-}
-</script>
+const HTMLResponse = document.querySelector("#app");
+const templateUL = document.getElementsByClassName(`ulNos`);
+
+console.log("antes de la llamada")
+$.ajax({ method: "GET", url: "http://jsonplaceholder.typicode.com/users" })
+    .done(function (users) {
+        //Mostrar por consola la respuesta de la API
+        console.log(users)
+
+        //Mostrar respuesta de API en un componente HTML
+        //document.getElementById("response").innerHTML = users;
+
+        //Mostrar respuesta de API en un componente HTML recorriendo cada usuario
+        for(let i=0; i<4;i++){
+            let user = users[i];
+            let elem = document.createElement("li");
+            elem.appendChild(
+                document.createTextNode(`${user.address.suite}`)
+            );
+            let elem2 = document.createElement("li");
+            elem2.appendChild(
+                document.createTextNode(`${user.email.toLowerCase()}`)
+            );
+            templateUL[i].appendChild(elem);
+            templateUL[i].appendChild(elem2);
+
+
+        }
+        
+        /*users.forEach((users) => {
+            let elem = document.createElement("li");
+            elem.appendChild(
+                document.createTextNode(`Nombre: ${users.name}, Email: ${users.email}`)
+            );
+            templateUL.appendChild(elem);
+        });
+        HTMLResponse.appendChild(templateUL);*/
+
+    }
+    )
