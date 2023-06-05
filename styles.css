@@ -127,6 +127,7 @@ display: inline-block
 }
 */
 .pContainerNos:hover{
+  display: inline-block
   -webkit-transform: scale(1.5);
     -moz-transform: scale(1.5);
     -o-transform: scale(1.5);
