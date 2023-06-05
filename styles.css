@@ -122,13 +122,18 @@ input[type="submit"] {
   margin-bottom: 20px;
  
 }
-*/
-#escudo {
-  margin: 0;
-  padding: 0;
-  text-align: right;
-}
-
 .pContainerNos{
 display: inline-block
 }
+*/
+.pContainerNos:hover{
+  -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  
+  
+}
+
+
