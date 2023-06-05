@@ -103,38 +103,13 @@ input[type="submit"] {
 .pContainerNos{
 display: inline-block
 }
-/*#inicio{
-  
-  margin: 0px;
-  padding: 20px auto;
- 
-
-}
-#turismo{
-  
-  margin: 0px;
-  padding: 20px auto;
-}
-#gastronomia{
-  
-  margin: 0px;
-  padding: 20px auto;
-}
-#contacto{
-  
-  margin-bottom: 20px;
- 
-}
-
 .pContainerNos:hover{
-  display: inline-block
   -webkit-transform: scale(1.5);
     -moz-transform: scale(1.5);
     -o-transform: scale(1.5);
     -ms-transform: scale(1.5);
   transform: scale(1.5);
 }
-*/
 
 
 
