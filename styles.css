@@ -100,6 +100,9 @@ input[type="submit"] {
   font-weight: bold;
   display: none;
 }
+.pContainerNos{
+display: inline-block
+}
 /*#inicio{
   
   margin: 0px;
@@ -122,9 +125,6 @@ input[type="submit"] {
   margin-bottom: 20px;
  
 }
-.pContainerNos{
-display: inline-block
-}
 
 .pContainerNos:hover{
   display: inline-block
@@ -135,5 +135,6 @@ display: inline-block
   transform: scale(1.5);
 }
 */
+
 
 
